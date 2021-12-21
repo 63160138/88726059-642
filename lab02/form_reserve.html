@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+</head>
+<body>
+    <h3>Hotel Booking</h3>
+    <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/642/88726059/services/post.php">
+        <style> 
+            select {
+                width: 100%;
+                padding: 5px 0px;
+                border: 1;
+                border-radius: 4px;
+                background-color: #ecebeb;
+                margin: 8px ;
+                color: #575757;
+            }
+            </style>
+            <style>
+                input[type=text] {
+                width: 45%;
+                padding: 5px 0px;
+                border: 1;
+                border-radius: 4px;
+                margin: 8px ;
+                box-sizing: border-box;
+                background-color: #ecebeb;
+                color: #a7a7a7;
+                }
+            </style>
+            <style>
+                input[type=date] {
+                width: 40%;
+                padding: 5px 0px;
+                border: 1;
+                border-radius: 4px;
+                margin: 8px ;
+                box-sizing: border-box;
+                background-color: #ecebeb;
+                color: #a7a7a7;
+                }
+            </style>
+            <style>
+                input[type=time] {
+                width: 30%;
+                padding: 5px 0px;
+                border: 1;
+                border-radius: 4px;
+                margin: 8px ;
+                box-sizing: border-box;
+                background-color: #ecebeb;
+                color: #a7a7a7;
+                }
+            </style>
+             <style>
+                input[type=submit] {
+                width: 50%;
+                padding: 8px 0px;
+                border-radius: 4px;
+                margin: 8px ;
+                box-sizing: border-box;
+                background-color: #353535;
+                color: #adabab;
+                }
+            </style>
+            
+           
+        <table>
+           <tr>
+               <td>
+                   <label for="roomtype">Room Type</label>
+               </td>
+               <td>
+                    <select name="roomtype" >
+                        <option value="Please Select">Please Select</option>
+                        <option value="Standard">Standard</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Deluxe">Deluxe</option>
+                    </select>
+               </td>
+           </tr>
+
+           <tr>
+            <td>
+                <label for="numofguests">Number of Guests</label>
+            </td>
+            <td>
+                 <select name="numguest" >
+                     <option value="Please Select">Please Select</option>
+                     <option value="1-2">1-2</option>
+                     <option value="3-4">3-4</option>
+                     <option value="5-6">5-6</option>
+                     <option value="7-8">7-8</option>
+                 </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                 <label for="name">Name</label>
+            </td>
+            <td>
+                <input type="text" name="fname" id="fname" placeholder="First">
+                <input type="text" name="lname" id="lname" placeholder="Last" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <label for="email">Email</label>
+            </td>
+            <td>
+                <input type="text" name="email" id="email" placeholder="john@company.com" style="width: 100%;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <label for="arrival">Arrival</label>
+            </td>
+            <td>
+                <input type="date" value="MM/DD/YYYY" name="arrivaldate" id="arrivaldate">
+                
+                <input type="time" value="HH : MM" name="arrivaltime" id="arrivaltime" >
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <label for="deperture">Departure</label>
+            </td>
+            <td>
+                <input type="date" value="MM/DD/YYYY" name="departuredate" id="departuredate">
+                
+                <input type="time" value="HH : MM" name="departuretime" id="departuretime" >
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <label for="freepickup">Free Pickup</label>
+            </td>
+            <td>
+                <input type="radio" name="pickup" id="pickup" value="Yes">Yes, Sure!<br>
+                <input type="radio" name="pickup" id="pickup" value="No">No, I already a car.
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <label for="fight">Fight Number</label>
+            </td>
+            <td>
+                <input type="text" name="fightnum" id="fightnum" placeholder="C1209" style="width: 100%;">
+            </td>
+        </tr>
+           <tr>
+                <td>
+                    Other requests
+                </td>
+                <td >
+                    
+                    <Textarea style="background-color: #ecebeb; margin: 8px; border-radius: 4px; color: #a7a7a7;width: 100%;" name="Otherreq" id="Otherreq" rows="5" cols="50" background-color="#ecebeb" ></Textarea>
+                </td>
+           </tr>
+           <tr>
+               <td>
+               </td>
+               <td>
+                   <input type="submit" value="Complete Reservation" >
+               </td>
+            
+           </tr>
+        
+        </table>
+    </form>
+</body>
+</html>
