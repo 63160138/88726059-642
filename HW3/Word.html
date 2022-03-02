@@ -1,0 +1,62 @@
+<style>
+    boby {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    span {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .green{
+        background-color: rgb(116, 221, 116);
+        color: white;
+    }
+
+    .yellow{
+        background-color: rgb(240, 222, 123);
+        color: black;
+    }
+
+    .red{
+        background-color: rgb(226, 51, 51);
+        color: white;
+    }
+</style>
+<script>
+   words = ["admin","bairn","cakes","daddy","excel","faire","gamer","hacks","inset","juicy","kills","lamps","march","never","ocean","panic","quilt","remix","scrap","taboo","until","verbs","watch","xenon","zebra"];
+   rndWord = words[Math.floor(Math.random() * words.length)];
+   document.write(rndWord);
+   numGuess = 6;
+   num = 1;
+
+   function doGuess(){
+       numCorrect = 0;
+       hist = document.getElementById("hist");
+       elmGuessWord = document.getElementById("guestWord")
+       guestWord = elmGuessWord.value;
+       s = "<div>";
+        for (i = 0;i <guestWord.length; i++){
+            if(rndWord.indexOf(guestWord[i]) < 0){
+                s += "<span class='red'>"+guestWord[i]+"</span>";
+            }else if(guestWord[i] == rndWord[i]){
+                s += "<span class='green'>"+guestWord[i]+"</span>";
+                numCorrect++;
+            }else{
+                s +="<span class='yellow'>"+guestWord[i]+"</span>";
+            }
+        }
+        s += "</div>";
+        hist.innerHTML += s;
+        num++;
+        elmGuessWord.select();
+        if(numCorrect == 5)hist.innerHTML += "Win!!!";
+        if(num > 6 && numCorrect != 5)hist.innerHTML += "Game Over!!!";
+    }
+</script>
+<div align=center>
+    <h1>Wordle</h1>
+    <input type="text" id="guestWord" maxlength="5"><button onClick="doGuess()" align=center >Guess</button>
+    <br><br>
+    <div id="hist"></div>
+</div>
